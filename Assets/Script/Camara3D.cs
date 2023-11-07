@@ -4,22 +4,22 @@ using UnityEngine;
 
 public class Camara3D : MonoBehaviour
 {
-    private Rigidbody movimiento;
-    public float velocidad;
+    public GameObject personaje;
+    bool siguiendo;
 
     // Start is called before the first frame update
     void Start()
     {
-        movimiento = GetComponent<Rigidbody>();
-        velocidad = 10f;
+        siguiendo = true;
+        personaje = GameObject.Find("Personaje");
     }
 
     // Update is called once per frame
     void Update()
     {
-        float movHorizontal = Input.GetAxis("Horizontal");
-        float movVertical = Input.GetAxis("Vertical");
-
-        movimiento.velocity = new Vector3(movHorizontal * velocidad, movimiento.velocity.y, movVertical * velocidad);
+        if (siguiendo == true) 
+        {
+            transform.position = new Vector3(personaje.transform.position.x, personaje.transform.position.y + 4, personaje.transform.position.z - 9);
+        }
     }
 }
