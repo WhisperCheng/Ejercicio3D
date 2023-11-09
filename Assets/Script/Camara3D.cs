@@ -19,7 +19,7 @@ public class Camara3D : MonoBehaviour
     {
         if (siguiendo == true) 
         {
-            transform.position = new Vector3(personaje.transform.position.x, personaje.transform.position.y + 4, personaje.transform.position.z - 9);
+            transform.position = new Vector3(personaje.transform.position.x, personaje.transform.position.y + 3, personaje.transform.position.z - 9);
         }
     }
 }
