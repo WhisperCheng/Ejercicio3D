@@ -11,6 +11,7 @@ public class Contador : MonoBehaviour
     public int monedas;
     public GameObject canvasPadre;
     public TMP_Text tiempo;
+    public AudioSource sonidoFX;
     float segundos = 0;
 
     // Start is called before the first frame update
@@ -22,6 +23,7 @@ public class Contador : MonoBehaviour
         canvasPadre = GameObject.Find("CanvasPadre");
         canvasPadre.SetActive(false);
 
+        sonidoFX = GameObject.Find("FondoFX").GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -30,10 +32,11 @@ public class Contador : MonoBehaviour
         segundos += Time.deltaTime;
 
         tiempo.text = "Tiempo = " + segundos.ToString("F2");
-        if (monedas == 3)
+        if (monedas == 4)
         {
             Time.timeScale = 0f;
             canvasPadre.SetActive(true);
+            sonidoFX.Stop();
         }
     }
     private void OnTriggerEnter(Collider collision)

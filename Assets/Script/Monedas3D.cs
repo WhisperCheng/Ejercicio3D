@@ -6,7 +6,8 @@ public class Monedas3D : MonoBehaviour
 {
 
     private ParticleSystem particulas;
-    bool pillado;
+    AudioSource sonidoFX;
+
 
 
     // Start is called before the first frame update
@@ -14,24 +15,21 @@ public class Monedas3D : MonoBehaviour
     {
         particulas = GetComponent<ParticleSystem>();
         particulas.Stop();
-        pillado = false;
+        sonidoFX = GameObject.Find("MonedasFX").GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (pillado == true)
-        {
-            Destroy(gameObject, particulas.duration);
-            
-        }
+
     }
 
     private void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.tag == "Personaje")
         {
-            pillado = true;
+            Destroy(gameObject, particulas.duration);
+            sonidoFX.Play();
             particulas.Play();
         }
     }
