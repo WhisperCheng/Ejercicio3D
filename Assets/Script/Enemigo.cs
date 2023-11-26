@@ -8,7 +8,7 @@ public class Enemigo : MonoBehaviour
 {
 
     public GameObject objetivo;
-    public AudioSource fondoFX;
+    AudioSource fondoFX;
     public float velocidad;
     // Start is called before the first frame update
     void Start()

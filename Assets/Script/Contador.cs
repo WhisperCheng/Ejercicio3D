@@ -13,6 +13,7 @@ public class Contador : MonoBehaviour
     public TMP_Text tiempo;
     public AudioSource sonidoFX;
     float segundos = 0;
+    float cooldown = 0f;
 
     // Start is called before the first frame update
     void Start()
@@ -31,6 +32,8 @@ public class Contador : MonoBehaviour
     {
         segundos += Time.deltaTime;
 
+        cooldown += Time.deltaTime;
+
         tiempo.text = "Tiempo = " + segundos.ToString("F2");
         if (monedas == 4)
         {
@@ -41,10 +44,11 @@ public class Contador : MonoBehaviour
     }
     private void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.tag == "Moneda")
+        if (collision.gameObject.tag == "Moneda" && cooldown > 1.1)
         {
             monedas++;
             contador.text = "Monedas recogidas = " + monedas;
+            cooldown = 0f;
         }
     }
 }
