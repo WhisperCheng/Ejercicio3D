@@ -13,7 +13,7 @@ public class Enemigo : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        velocidad = 5f;
+        velocidad = 8f;
         fondoFX = GameObject.Find("FondoFX").GetComponent<AudioSource>();
     }
 

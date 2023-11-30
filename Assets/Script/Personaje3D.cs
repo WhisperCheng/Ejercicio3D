@@ -11,7 +11,7 @@ public class Personaje : MonoBehaviour
     int longitud = 1;
     bool tocando;
     bool dobleSalto;
-    public float cooldown = 0f;
+    public float cooldown;
     public float velocidad;
 
     // Start is called before the first frame update
@@ -19,6 +19,7 @@ public class Personaje : MonoBehaviour
     {
         cuerpo = GetComponent<Rigidbody>();
         velocidad = 10f;
+        cooldown = 5;
     }
 
     // Update is called once per frame
@@ -38,7 +39,7 @@ public class Personaje : MonoBehaviour
             Debug.Log("Boost de velocidad");
             cooldown = 0;
         }
-        else if (cooldown > 5)
+        else if (cooldown > 2)
         {
             velocidad = 10f;
             cuerpo.velocity = new Vector3(movHorizontal * velocidad, cuerpo.velocity.y, movVertical * velocidad);
