@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Enemigo : MonoBehaviour
 {
@@ -27,7 +28,7 @@ public class Enemigo : MonoBehaviour
     {
         if (collision.gameObject.tag == "Personaje") 
         {
-            Time.timeScale = 0f;
+            SceneManager.LoadScene("Final");
             fondoFX.Stop();
         }
     }

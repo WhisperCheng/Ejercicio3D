@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System;
+using UnityEngine.SceneManagement;
 
 public class Contador : MonoBehaviour
 {
@@ -37,6 +38,7 @@ public class Contador : MonoBehaviour
         tiempo.text = "Tiempo = " + segundos.ToString("F2");
         if (monedas == 4)
         {
+            //SceneManager.LoadScene("Final");
             Time.timeScale = 0f;
             canvasPadre.SetActive(true);
             sonidoFX.Stop();
