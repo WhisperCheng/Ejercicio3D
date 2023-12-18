@@ -22,6 +22,28 @@ MonoBehaviour:
     m_Localized: English
     m_Metadata:
       m_Items: []
+  - m_Id: 304487681449984
+    m_Localized: Select
+    m_Metadata:
+      m_Items: []
+  - m_Id: 305394531917824
+    m_Localized: Start
+    m_Metadata:
+      m_Items: []
+  - m_Id: 305538237161472
+    m_Localized: Language
+    m_Metadata:
+      m_Items: []
+  - m_Id: 306224999915520
+    m_Localized: Main Menu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 306640403783680
+    m_Localized: 'Congratulation
+
+      You Win!!!'
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

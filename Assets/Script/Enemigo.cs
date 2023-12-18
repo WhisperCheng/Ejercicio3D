@@ -28,7 +28,7 @@ public class Enemigo : MonoBehaviour
     {
         if (collision.gameObject.tag == "Personaje") 
         {
-            SceneManager.LoadScene("Final");
+            SceneManager.LoadScene("Muerte");
             fondoFX.Stop();
         }
     }

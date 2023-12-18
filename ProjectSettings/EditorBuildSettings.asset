@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Final.unity
     guid: f9cfdde178effce45841a9d3460af466
+  - enabled: 1
+    path: Assets/Scenes/Muerte.unity
+    guid: b59f5f4fdf4878c48a963e647d7990be
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: a0df321f684f8814b95867e1b0af6af1, type: 2}
     com.unity.localization.settings: {fileID: 11400000, guid: 4cc6fd381a1fcf24287b741fda4f23d7, type: 2}

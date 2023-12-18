@@ -22,6 +22,28 @@ MonoBehaviour:
     m_Localized: "Espa\xF1ol"
     m_Metadata:
       m_Items: []
+  - m_Id: 304487681449984
+    m_Localized: Seleccionar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 305394531917824
+    m_Localized: Iniciar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 305538237161472
+    m_Localized: Idioma
+    m_Metadata:
+      m_Items: []
+  - m_Id: 306224999915520
+    m_Localized: Menu Principal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 306640403783680
+    m_Localized: 'Felicidades
+
+      Ganastes!!!'
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
